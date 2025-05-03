@@ -68,7 +68,7 @@ const ProductDetail = async ({ params }) => {
       <RevealClient>
         <OutStock remainingQuantity={remainingQuantity} />
       </RevealClient>
-      <FormSubmit id={id} name={name} />
+      <FormSubmit id={id} name={name} price={price} />
 
       <Navbar originalPrice={originalPrice} price={price} />
     </Flex>

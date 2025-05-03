@@ -1,5 +1,6 @@
 'use client';
 
+import { formatCurrency } from '@/utils/helper-server';
 import { Button, CloseButton, Dialog, Flex, Input, Link, Portal, Text, Textarea } from '@chakra-ui/react';
 import axios from 'axios';
 import dayjs from 'dayjs';
@@ -7,7 +8,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
-const FormSubmit = ({ id, name }) => {
+const FormSubmit = ({ id, name, price }) => {
   const {
     register,
     handleSubmit,
@@ -25,7 +26,7 @@ const FormSubmit = ({ id, name }) => {
       phone: phone?.trim(),
       address: address?.trim(),
       createdAt: dayjs().format('DD/MM/YYYY - HH:mm'),
-      productName: name
+      productName: `${name} - ${formatCurrency(price)}`
     };
     setLoading(true);
 

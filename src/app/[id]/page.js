@@ -12,6 +12,7 @@ import Price from './price';
 import Review from './review';
 import Slider from './slider';
 import Video from './video';
+import Script from 'next/script';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -46,6 +47,14 @@ const ProductDetail = async ({ params }) => {
 
   return (
     <Flex as="main" direction="column" pos="relative" minH="100vh" bgColor="#FFF">
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy='afterInteractive'></Script>
+      <Script id="google-analytics" strategy='afterInteractive'>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EHY6RLHMNZ');`}
+      </Script>
       <Discount discount={discount} name={shortName} />
       <RevealClient>
         <Slider images={images} name={name} />

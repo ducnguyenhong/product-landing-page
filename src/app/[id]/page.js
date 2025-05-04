@@ -12,6 +12,7 @@ import Price from './price';
 import Review from './review';
 import Slider from './slider';
 import Video from './video';
+import Script from 'next/script';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -46,6 +47,41 @@ const ProductDetail = async ({ params }) => {
 
   return (
     <Flex as="main" direction="column" pos="relative" minH="100vh" bgColor="#FFF">
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy='afterInteractive'></Script>
+      <Script id="google-analytics" strategy='afterInteractive'>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EHY6RLHMNZ');
+        gtag("event", "view_item", {
+          currency: "USD",
+          value: 30.03,
+          items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }
+          ]
+        });
+        `}
+      </Script>
       <Discount discount={discount} name={shortName} />
       <RevealClient>
         <Slider images={images} name={name} />

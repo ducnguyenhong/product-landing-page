@@ -28,9 +28,10 @@ const BuyNow = ({ mt }) => {
       py="14px"
       borderRadius={8}
       cursor="pointer"
+      className="animate-zoom-sell"
       onClick={scrollToDiv}
     >
-      <Flex align="center" gap="8px" className="animate-zoom-sell">
+      <Flex align="center" gap="8px">
         <FaCartPlus color="#FFF" size={19} />
         <Text color="#FFF" fontSize={17} fontWeight={400}>
           Mua ngay

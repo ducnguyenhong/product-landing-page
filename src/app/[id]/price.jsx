@@ -11,7 +11,7 @@ import { TbRefreshAlert } from 'react-icons/tb';
 import BuyNow from './buy-now';
 
 const Price = (props) => {
-  const { price, originalPrice, quantitySold, discount, viewing } = props;
+  const { price, originalPrice, quantitySold, discount, viewing, name } = props;
 
   const viewingList = [viewing, viewing + 3, viewing + 2, viewing + 5, viewing + 7, viewing + 4];
   const [currentViewing, setCurrentViewing] = useState(viewing);
@@ -28,6 +28,9 @@ const Price = (props) => {
   return (
     <Flex direction="column" align="center" mt="16px" mx={{ base: '16px', md: '24px', lg: '180px' }}>
       <Flex w="full" direction="column">
+        <Text as="h1" fontSize={20} fontWeight={600} color="#070707" lineHeight="28px" mb="12px">
+          {name}
+        </Text>
         <Flex align="flex-end" gap="8px">
           <Text color="#e62c2c" fontSize={24} fontWeight={700}>
             {formatCurrency(price)}

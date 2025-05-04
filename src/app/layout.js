@@ -11,7 +11,7 @@ export const metadata = getMetadata();
 export default function RootLayout({ children }) {
   return (
     <html lang="vi" suppressHydrationWarning>
-      <body className={fontFamily.className}>
+      <body className={fontFamily.className} style={{ backgroundColor: '#FFF' }}>
         <Provider>
           {children}
           <Footer />

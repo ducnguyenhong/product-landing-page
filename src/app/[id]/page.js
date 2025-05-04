@@ -30,6 +30,7 @@ const ProductDetail = async ({ params }) => {
 
   const {
     name,
+    shortName,
     discount,
     price,
     originalPrice,
@@ -45,7 +46,7 @@ const ProductDetail = async ({ params }) => {
 
   return (
     <Flex as="main" direction="column" pos="relative" minH="100vh" bgColor="#FFF">
-      <Discount discount={discount} name={name} />
+      <Discount discount={discount} name={shortName} />
       <RevealClient>
         <Slider images={images} name={name} />
       </RevealClient>
@@ -54,6 +55,7 @@ const ProductDetail = async ({ params }) => {
       </RevealClient>
       <RevealClient>
         <Price
+          name={name}
           originalPrice={originalPrice}
           price={price}
           discount={discount}

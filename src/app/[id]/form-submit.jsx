@@ -1,6 +1,6 @@
 'use client';
 
-import { formatCurrency } from '@/utils/helper-server';
+import { formatCurrency, PX_ALL } from '@/utils/helper-server';
 import { Button, CloseButton, Dialog, Flex, Input, Link, Portal, Text, Textarea } from '@chakra-ui/react';
 import axios from 'axios';
 import dayjs from 'dayjs';
@@ -49,14 +49,14 @@ const FormSubmit = ({ id, name, price }) => {
     <Flex
       id="form-submit"
       direction="column"
-      mx="16px"
+      mx={PX_ALL}
       mt="24px"
       bgGradient="to-r"
       gradientFrom="#e33131"
       gradientVia="#e51818"
       gradientTo="#ff6464"
-      px="16px"
-      py="24px"
+      px={{ base: '16px', lg: '96px' }}
+      py={{ base: '24px', lg: '48px' }}
       borderRadius={8}
     >
       <Text color="#FFF" fontWeight={500} fontSize={20} textAlign="center" lineHeight="26px" mb="16px">
@@ -134,11 +134,11 @@ const FormSubmit = ({ id, name, price }) => {
 
           <Button
             type="submit"
-            w={{ base: 'full', lg: '123px' }}
-            h="48px"
+            w="full"
+            h="50px"
             color="#FFF"
             bgColor="#292929"
-            fontSize={16}
+            fontSize={17}
             borderRadius={6}
             boxShadow="0px 4px 8px 0px #00235733"
             _hover={{ bgColor: '#484848' }}

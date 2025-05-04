@@ -1,9 +1,10 @@
+import { PX_ALL } from '@/utils/helper-server';
 import { Box, Flex, Text } from '@chakra-ui/react';
 
 const OutStock = ({ remainingQuantity }) => {
   return (
-    <Flex direction="column" mt="36px">
-      <Box px="16px" mt="8px">
+    <Flex direction="column" mt={{ base: '36px', lg: '48px' }}>
+      <Box px={PX_ALL} mt="8px">
         <Flex align="center" gap="12px">
           <Text
             bgColor="#fff"

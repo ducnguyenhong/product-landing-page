@@ -1,13 +1,15 @@
+import { PX_ALL } from '@/utils/helper-server';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { FaInfoCircle } from 'react-icons/fa';
+import BuyNow from './buy-now';
 
 const Info = ({ content }) => {
   return (
-    <Flex direction="column" mt="36px">
-      <Box px="16px">
+    <Flex direction="column" mt={{ base: '36px', lg: '48px' }}>
+      <Box px={PX_ALL}>
         <Flex align="center">
           <FaInfoCircle color="#e62c2c" size={22} />
-          <Text fontSize={20} fontWeight={600} color="#070707" mt="2px" ml="8px" textTransform="uppercase">
+          <Text fontSize={20} fontWeight={700} color="#070707" mt="2px" ml="8px" textTransform="uppercase">
             Thông tin sản phẩm
           </Text>
         </Flex>
@@ -20,6 +22,7 @@ const Info = ({ content }) => {
           color="#070707"
         />
       </Box>
+      <BuyNow mt={{ base: '24px', lg: '36px' }} />
     </Flex>
   );
 };

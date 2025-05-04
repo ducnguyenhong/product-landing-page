@@ -8,6 +8,7 @@ import { FaRegEye } from 'react-icons/fa';
 import { FaRegCircleCheck } from 'react-icons/fa6';
 import { LiaShippingFastSolid } from 'react-icons/lia';
 import { TbRefreshAlert } from 'react-icons/tb';
+import BuyNow from './buy-now';
 
 const Price = (props) => {
   const { price, originalPrice, quantitySold, discount, viewing } = props;
@@ -25,8 +26,8 @@ const Price = (props) => {
   }, []);
 
   return (
-    <Flex direction="column" align="center" mt="16px">
-      <Flex w="full" direction="column" px="16px">
+    <Flex direction="column" align="center" mt="16px" mx={{ base: '16px', md: '24px', lg: '180px' }}>
+      <Flex w="full" direction="column">
         <Flex align="flex-end" gap="8px">
           <Text color="#e62c2c" fontSize={24} fontWeight={700}>
             {formatCurrency(price)}
@@ -39,7 +40,7 @@ const Price = (props) => {
           </Text>
         </Flex>
 
-        <Flex align="center" mt="18px" gap="14px">
+        <Flex align="center" mt="18px" gap="10px">
           <Flex align="center" gap="6px" justify="flex-end">
             <Text fontSize={15} color="#070707">
               Đã bán{' '}
@@ -50,7 +51,7 @@ const Price = (props) => {
             </Text>
           </Flex>
           <Flex w="1px" h="18px" bgColor="#b3b3b3" />
-          <Flex align="center" gap="6px" justify="flex-end">
+          <Flex align="center" gap="4px" justify="flex-end">
             <FaRegEye color="#e62c2c" size={20} />
             <Text color="#e62c2c" fontSize={16} fontWeight={500}>
               {currentViewing}
@@ -87,6 +88,7 @@ const Price = (props) => {
           </Text>
         </Flex>
       </Grid>
+      <BuyNow mt={{ base: '24px', lg: '36px' }} />
     </Flex>
   );
 };

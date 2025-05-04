@@ -1,8 +1,17 @@
+import { PX_ALL } from '@/utils/helper-server';
 import { Flex, Image, Link, Text } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
-    <Flex as="footer" direction="column" bgColor="#292929" p="16px" pb="80px" mt="32px">
+    <Flex
+      as="footer"
+      direction="column"
+      bgColor="#292929"
+      px={PX_ALL}
+      py="16px"
+      pb={{ base: '80px', lg: '24px' }}
+      mt="32px"
+    >
       <Text color="#FFF" fontWeight={600} fontSize={20}>
         Gia Dụng Mới
       </Text>

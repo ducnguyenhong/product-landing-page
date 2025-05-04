@@ -3,6 +3,7 @@ import { Flex, Text } from '@chakra-ui/react';
 const Discount = ({ discount, name }) => {
   return (
     <Flex
+      mx={{ base: 0, lg: '180px' }}
       as="nav"
       h="50px"
       gap="12px"

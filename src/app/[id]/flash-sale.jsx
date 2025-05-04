@@ -28,6 +28,7 @@ const FlashSale = ({ discount }) => {
 
   return (
     <Flex
+      mx={{ base: 0, lg: '180px' }}
       mt="8px"
       h="42px"
       px="16px"

@@ -11,6 +11,7 @@ import OutStock from './out-stock';
 import Price from './price';
 import Review from './review';
 import Slider from './slider';
+import Video from './video';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -38,7 +39,8 @@ const ProductDetail = async ({ params }) => {
     remainingQuantity,
     quantitySold,
     viewing,
-    numOfReview
+    numOfReview,
+    videoYoutube
   } = product;
 
   return (
@@ -69,7 +71,11 @@ const ProductDetail = async ({ params }) => {
         <OutStock remainingQuantity={remainingQuantity} />
       </RevealClient>
       <FormSubmit id={id} name={name} price={price} />
-
+      {!!videoYoutube && (
+        <RevealClient>
+          <Video videoYoutube={videoYoutube} />
+        </RevealClient>
+      )}
       <Navbar originalPrice={originalPrice} price={price} />
     </Flex>
   );

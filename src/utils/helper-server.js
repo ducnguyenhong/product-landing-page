@@ -1,5 +1,7 @@
 import { MOBILE_NETWORK } from './data';
 
+export const PX_ALL = { base: '16px', md: '24px', lg: '180px', xl: '220px', '2xl': '280px' };
+
 export const formatCurrency = (price) => {
   const number = Number(price);
   if (isNaN(number)) {

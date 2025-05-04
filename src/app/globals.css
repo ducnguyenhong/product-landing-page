@@ -70,3 +70,11 @@ a {
 .animate-sake {
   animation: shake 0.5s ease-in-out infinite;
 }
+
+.product-slider-gallery .swiper-slide {
+  opacity: 0.4;
+}
+
+.product-slider-gallery .swiper-slide-thumb-active {
+  opacity: 1;
+}

@@ -14,8 +14,8 @@ const Slider = ({ images, name }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <Box>
-      <Box h="400px" overflow="hidden" pos="relative">
+    <Box mx={{ base: 0, lg: '180px' }}>
+      <Box h={{ base: '400px', md: '500px', lg: '600px' }} overflow="hidden" pos="relative">
         <Flex
           align="center"
           gap="6px"
@@ -42,7 +42,10 @@ const Slider = ({ images, name }) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} style={{ border: '1px solid #e6e6e6', objectFit: 'cover' }} />
+              <img
+                src={image}
+                style={{ border: '1px solid #e6e6e6', objectFit: 'cover', width: '100%', height: '100%' }}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -55,14 +58,16 @@ const Slider = ({ images, name }) => {
           freeMode
           watchSlidesProgress
           modules={[FreeMode, Navigation, Thumbs]}
+          onSwiper={setThumbsSwiper}
+          className="product-slider-gallery"
         >
           {images.map((image, index) => (
             <SwiperSlide
               key={index}
-              onClick={() => {
-                console.log('ducnh 99');
-                setThumbsSwiper(image);
-              }}
+              // onClick={() => {
+              //   console.log('ducnh 99');
+              //   setThumbsSwiper(image);
+              // }}
             >
               <img
                 src={image}

@@ -38,6 +38,7 @@ export const PRODUCT_LIST = [
     remainingQuantity: 14, // số sản phẩm còn lại
     discount: '50%', // phần trăm giảm giá
     viewing: 92, // số lượng người đang xem
+    videoYoutube: 'https://www.youtube.com/embed/nFpCx6Lgi0k', // link nhúng video youtube
 
     images: [
       '/images/products/quat-tich-dien-1.jpg',

@@ -8,8 +8,8 @@ const Contact = () => {
       justify="center"
       pos="fixed"
       zIndex={100}
-      bottom="74px"
-      right="12px"
+      bottom={{ base: '74px', lg: '24px' }}
+      right={{ base: '12px', lg: '24px' }}
       bgColor="#00b300"
       w="56px"
       h="56px"

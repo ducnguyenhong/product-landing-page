@@ -16,8 +16,8 @@ import Video from './video';
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const product = PRODUCT_LIST.find((item) => item.id === id);
-  const { name, images, description } = product || {};
-  return getMetadata({ title: name, image: images?.[0], description });
+  const { name, images, description, discount } = product || {};
+  return getMetadata({ title: `${name} - Giảm giá sốc ${discount}`, image: images?.[0], description });
 }
 
 const ProductDetail = async ({ params }) => {

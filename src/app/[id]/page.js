@@ -7,6 +7,7 @@ import FlashSale from './flash-sale';
 import FormSubmit from './form-submit';
 import Info from './info';
 import Navbar from './navbar';
+import OtherProduct from './other-product';
 import OutStock from './out-stock';
 import Price from './price';
 import Review from './review';
@@ -78,6 +79,9 @@ const ProductDetail = async ({ params }) => {
           <Video videoYoutube={videoYoutube} />
         </RevealClient>
       )}
+      <RevealClient>
+        <OtherProduct id={id} />
+      </RevealClient>
       <Navbar originalPrice={originalPrice} price={price} />
     </Flex>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { LiaShippingFastSolid } from 'react-icons/lia';
 import 'swiper/css';
@@ -15,7 +15,7 @@ const Slider = ({ images, name }) => {
 
   return (
     <Box mx={{ base: 0, lg: '180px' }}>
-      <Box h={{ base: '400px', md: '500px', lg: '600px' }} overflow="hidden" pos="relative">
+      <Box h={{ base: '400px', md: '500px', lg: '650px' }} overflow="hidden" pos="relative">
         <Flex
           align="center"
           gap="6px"
@@ -42,16 +42,17 @@ const Slider = ({ images, name }) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
                 src={image}
-                style={{ border: '1px solid #e6e6e6', objectFit: 'cover', width: '100%', height: '100%' }}
+                style={{ border: '1px solid #e6e6e6', objectFit: 'cover', width: '100%' }}
+                h={{ base: '400px', md: '500px', lg: '650px' }}
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </Box>
 
-      <Box mt="8px" maxH="78px" overflow="hidden">
+      <Box mt="8px" h={{ base: '78px', lg: '120px' }} overflow="hidden">
         <Swiper
           spaceBetween={10}
           slidesPerView={5}
@@ -69,10 +70,16 @@ const Slider = ({ images, name }) => {
               //   setThumbsSwiper(image);
               // }}
             >
-              <img
+              <Image
                 src={image}
                 alt={name}
-                style={{ border: '1px solid #e6e6e6', borderRadius: 2, objectFit: 'cover' }}
+                style={{
+                  border: '1px solid #e6e6e6',
+                  borderRadius: 2,
+                  objectFit: 'cover',
+                  width: '100%'
+                }}
+                h={{ base: '78px', lg: '120px' }}
               />
             </SwiperSlide>
           ))}

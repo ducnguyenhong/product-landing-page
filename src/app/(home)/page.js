@@ -4,12 +4,21 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import { FaFire } from 'react-icons/fa6';
 import Intro from './intro';
 import ProductList from './product-list';
+import Script from 'next/script';
 
 export const metadata = getMetadata();
 
 const Home = () => {
   return (
     <Box>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy='afterInteractive'></Script>
+      <Script id="google-analytics" strategy='afterInteractive'>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EHY6RLHMNZ');`}
+      </Script>
       <Intro />
       <Flex pt="74px" px={PX_ALL} align="center" gap="8px">
         <FaFire size={24} color="red" />

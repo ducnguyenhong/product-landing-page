@@ -193,18 +193,18 @@ export const PRODUCT_LIST = [
 
   <img src="/images/products/ao-chong-nang-2.webp" style="margin: 14px 0px" alt="áo chống nắng" />
 
-  <h3>Thiết kế kiểu dáng áo chống nắng thời trang, nam tính và trẻ trung:</h3>
+  <h3>Thiết kế kiểu dáng áo chống nắng thời trang, trẻ trung:</h3>
   <ul>
-    <li>Kiểu dáng thanh lịch, trẻ trung, phù hợp với chàng trai ở nhiều độ tuổi khác nhau.</li>
+    <li>Kiểu dáng thanh lịch, trẻ trung, phù hợp với nhiều độ tuổi khác nhau.</li>
     <li>Tinh tế trên từng đường may, tỉ mỉ trên từng chi tiết, áo khoác chống nắng 2 lớp có thiết kế kín đến cả mũi, thay thế khẩu trang.</li>
     <li>Thiết kế 2 lớp là sản phẩm cao cấp, có khả năng chống tia UV bảo vệ làn da khỏi tác hại của tia cực tím.</li>
     <li>Thoải mái tuyệt vời, thư giãn, thoáng mát, không hề bí bách hay nóng nực.</li>
-    <li>Có thể kết hợp nhiều phong cách thời trang khác nhau: mặc với quần bò hay quần kaki đều hợp, đem lại cho nam giới sự năng động, cá tính, thể thao và đa năng.</li>
+    <li>Có thể kết hợp nhiều phong cách thời trang khác nhau: mặc với quần bò hay quần kaki đều hợp, đem lại sự năng động, cá tính, thể thao và đa năng.</li>
   </ul>
 
   <img src="/images/products/ao-chong-nang-6.webp" style="margin: 14px 0px" alt="áo chống nắng" />
 
-  <h3>Các chi tiết áo nắng nam được hoàn thiện tỉ mỉ, tiện dụng:</h3>
+  <h3>Các chi tiết áo nắng được hoàn thiện tỉ mỉ, tiện dụng:</h3>
   <ul>
     <li>Đầy đủ tem mác chính hãng.</li>
     <li>2 túi ngoài áo có khóa kéo, kèm theo túi trong có khóa gián tiện lợi và kín đáo.</li>

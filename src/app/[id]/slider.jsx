@@ -15,7 +15,7 @@ const Slider = ({ images, name }) => {
 
   return (
     <Box mx={{ base: 0, lg: '180px' }}>
-      <Box h={{ base: '400px', md: '500px', lg: '650px' }} overflow="hidden" pos="relative">
+      <Box h={{ base: '420px', md: '500px', lg: '650px' }} overflow="hidden" pos="relative">
         <Flex
           align="center"
           gap="6px"
@@ -45,7 +45,7 @@ const Slider = ({ images, name }) => {
               <Image
                 src={image}
                 style={{ border: '1px solid #e6e6e6', objectFit: 'cover', width: '100%' }}
-                h={{ base: '400px', md: '500px', lg: '650px' }}
+                h={{ base: '420px', md: '500px', lg: '650px' }}
               />
             </SwiperSlide>
           ))}

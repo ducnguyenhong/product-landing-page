@@ -1,32 +1,52 @@
 'use client';
 
 import { formatCurrency, PX_ALL } from '@/utils/helper-server';
-import { Button, CloseButton, Dialog, Flex, Input, Link, Portal, Text, Textarea } from '@chakra-ui/react';
+import {
+  Button,
+  CloseButton,
+  createListCollection,
+  Dialog,
+  Flex,
+  Input,
+  Link,
+  Portal,
+  Select,
+  Text,
+  Textarea
+} from '@chakra-ui/react';
 import axios from 'axios';
 import dayjs from 'dayjs';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
-const FormSubmit = ({ id, name, price }) => {
+const FormSubmit = ({ id, name, price, sizes }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    control
   } = useForm();
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const dataSizes = createListCollection({
+    items: sizes || []
+  });
+
   const onSubmit = (values) => {
-    const { phone, address, fullName } = values;
+    const { phone, address, fullName, size } = values;
+
     const data = {
       fullName: fullName?.trim(),
       phone: phone?.trim(),
       address: address?.trim(),
       createdAt: dayjs().format('DD/MM/YYYY - HH:mm'),
-      productName: `${name} - ${formatCurrency(price)}`
+      productName: `${name} - ${formatCurrency(price)}`,
+      productSize: size ? size?.[0] : 'Chưa chọn',
+      productId: id
     };
     setLoading(true);
 
@@ -64,6 +84,14 @@ const FormSubmit = ({ id, name, price }) => {
         <br />
         để mua sản phẩm
       </Text>
+      <Flex align="center" justify="center" mb="16px">
+        <Flex align="center" bgColor="#1b301b" gap="8px" px="12px" py="6px" borderRadius={6}>
+          <Text color="#FFF" fontSize={16} fontWeight={500}>
+            {formatCurrency(price)}
+          </Text>
+          <Text color="#FFF">(miễn phí ship)</Text>
+        </Flex>
+      </Flex>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'block', width: '100%' }}>
         <Flex direction="column" w="full" gap="20px">
           <Flex direction="column" gap="6px">
@@ -104,6 +132,50 @@ const FormSubmit = ({ id, name, price }) => {
               _focus={{ outline: 'none' }}
             />
           </Flex>
+
+          {!!sizes && (
+            <Flex direction="column" gap="6px">
+              <Text color="#FFF" fontSize={16} fontWeight={500}>
+                Chọn size
+              </Text>
+
+              <Controller
+                control={control}
+                name="size"
+                render={({ field }) => (
+                  <Select.Root
+                    collection={dataSizes}
+                    name={field.name}
+                    value={field.value}
+                    onValueChange={({ value }) => field.onChange(value)}
+                    onInteractOutside={() => field.onBlur()}
+                  >
+                    <Select.HiddenSelect />
+                    <Select.Control>
+                      <Select.Trigger borderRadius={6} h="42px" px="12px" bgColor="#FFF">
+                        <Select.ValueText fontSize={16} placeholder="Chọn size áo" />
+                      </Select.Trigger>
+                      <Select.IndicatorGroup>
+                        <Select.Indicator mr="12px" />
+                      </Select.IndicatorGroup>
+                    </Select.Control>
+                    <Portal>
+                      <Select.Positioner>
+                        <Select.Content py="4px">
+                          {dataSizes.items.map((i) => (
+                            <Select.Item item={i} key={i.value} px="12px" py="4px">
+                              {i.label}
+                              <Select.ItemIndicator />
+                            </Select.Item>
+                          ))}
+                        </Select.Content>
+                      </Select.Positioner>
+                    </Portal>
+                  </Select.Root>
+                )}
+              />
+            </Flex>
+          )}
 
           <Flex direction="column" gap="6px">
             <Text color="#FFF" fontSize={16} fontWeight={500}>

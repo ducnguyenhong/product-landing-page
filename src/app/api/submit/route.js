@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { fullName, phone, address, createdAt, productId, productName } = body;
+    const { fullName, phone, address, createdAt, productId, productName, productSize } = body;
 
     const scriptUrl = process.env.GOOGLE_SHEET_SCRIPT;
 
@@ -16,7 +16,9 @@ export async function POST(request) {
       createdAt,
       status: 'Mới',
       network: findNetworkByPrefix(phone)?.name || 'Không xác định',
-      productName
+      productName,
+      productSize,
+      productId
     });
 
     return NextResponse.json({ message: 'Success', data: response.data });

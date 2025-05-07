@@ -2,6 +2,7 @@ import { NotFound, RevealClient } from '@/components/common';
 import { PRODUCT_LIST } from '@/utils/data';
 import { getMetadata } from '@/utils/meta-data';
 import { Flex } from '@chakra-ui/react';
+import Script from 'next/script';
 import Discount from './discount';
 import FlashSale from './flash-sale';
 import FormSubmit from './form-submit';
@@ -13,7 +14,6 @@ import Price from './price';
 import Review from './review';
 import Slider from './slider';
 import Video from './video';
-import Script from 'next/script';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -43,13 +43,14 @@ const ProductDetail = async ({ params }) => {
     quantitySold,
     viewing,
     numOfReview,
-    videoYoutube
+    videoYoutube,
+    sizes
   } = product;
 
   return (
     <Flex as="main" direction="column" pos="relative" minH="100vh" bgColor="#FFF">
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy='afterInteractive'></Script>
-      <Script id="google-analytics" strategy='afterInteractive'>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -82,7 +83,7 @@ const ProductDetail = async ({ params }) => {
       <RevealClient>
         <OutStock remainingQuantity={remainingQuantity} />
       </RevealClient>
-      <FormSubmit id={id} name={name} price={price} />
+      <FormSubmit id={id} name={name} price={price} sizes={sizes} />
       {!!videoYoutube && (
         <RevealClient>
           <Video videoYoutube={videoYoutube} />

@@ -25,6 +25,7 @@ const OtherProduct = ({ id }) => {
               key={id}
               border="1px solid #e6e6e6"
               borderRadius={8}
+              overflow="hidden"
               boxShadow={{ base: 'xs', lg: 'xs' }}
               transitionDuration="250ms"
               _hover={{ boxShadow: 'lg' }}
@@ -53,9 +54,9 @@ const OtherProduct = ({ id }) => {
                       </Flex>
                     </Box>
                   </AspectRatio>
-                  <Flex direction="column" justify="space-between" p="16px">
+                  <Flex direction="column" justify="space-between" p="12px">
                     <Flex direction="column" flex={1}>
-                      <Text fontSize={18} lineClamp={3} fontWeight={500} lineHeight="24px" color="#070707">
+                      <Text fontSize={18} lineClamp={3} fontWeight={500} lineHeight="22px" color="#070707">
                         {name}
                       </Text>
                       <Flex align="center" gap="2px" mt="8px">

@@ -39,7 +39,7 @@ const FormSubmit = (props) => {
 
   const onSubmit = (values) => {
     const { phone, address, fullName, size } = values;
-    const productSize = size ? size?.[0] : 'Chưa chọn';
+    const productSize = sizes ? (size ? size?.[0] : 'Chưa chọn') : 'N/A';
 
     const data = {
       fullName: fullName?.trim(),

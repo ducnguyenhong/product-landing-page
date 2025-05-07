@@ -29,106 +29,106 @@ export const MOBILE_NETWORK = [
 export const PRODUCT_LIST = [
   {
     id: 'quat-tich-dien',
-    name: 'Quạt tích điện để bàn - Làm mát nhanh - Pin sử dụng nhiều giờ',
+    name: 'Quạt tích điện để bàn - Làm mát nhanh - Pin 10 cell sử dụng trong 8-10 tiếng',
     shortName: 'Quạt tích điện',
     description:
       'Quạt tích điện là một thiết bị gia dụng tiện lợi, giúp làm mát không khí trong những ngày hè oi ả. Với thiết kế nhỏ gọn, dễ dàng di chuyển và sử dụng, quạt tích điện trở thành người bạn đồng hành lý tưởng cho mọi gia đình.',
-    originalPrice: 600000, // giá gốc
-    price: 299000, // giá sau khi giảm (giá chính)
-    quantitySold: 1407, // số sản phẩm đã bán
-    remainingQuantity: 14, // số sản phẩm còn lại
-    discount: '50%', // phần trăm giảm giá
-    viewing: 92, // số lượng người đang xem
-    videoYoutube: 'https://www.youtube.com/embed/nFpCx6Lgi0k', // link nhúng video youtube
+    originalPrice: 529000, // giá gốc
+    price: 369000, // giá sau khi giảm (giá chính)
+    quantitySold: 562, // số sản phẩm đã bán
+    remainingQuantity: 27, // số sản phẩm còn lại
+    discount: '30%', // phần trăm giảm giá
+    viewing: 134, // số lượng người đang xem
+    videoYoutube: 'https://www.youtube.com/embed/RE4kAEtVzOY', // link nhúng video youtube
 
     images: [
-      '/images/products/quat-tich-dien-1.jpg',
       '/images/products/quat-tich-dien-1.webp',
-      '/images/products/quat-tich-dien-1.jpg',
-      '/images/products/quat-tich-dien-1.webp',
-      '/images/products/quat-tich-dien-1.jpg'
+      '/images/products/quat-tich-dien-2.webp',
+      '/images/products/quat-tich-dien-3.webp',
+      '/images/products/quat-tich-dien-4.webp',
+      '/images/products/quat-tich-dien-5.webp'
     ],
 
-    numOfReview: 461, // số lượng đánh giá
+    numOfReview: 208, // số lượng đánh giá
     reviews: [
       {
-        comment: 'Sản phẩm rất tốt, làm mát nhanh chóng và êm ái. Tôi rất hài lòng với quạt tích điện này',
-        avatar: '/images/reviews/user-1.webp',
-        fullName: 'Lê Thị Hoà'
+        comment: 'Chất lượng tốt, gia công chắc chắn, quạt chạy êm, dùng pin tiện lợi, chân pin phổ thông.',
+        avatar: '/images/reviews/user-6.jpg',
+        fullName: 'Trần Khánh Linh'
       },
       {
-        comment: 'Quạt chạy êm, nhưng hơi nặng một chút. Tuy nhiên, tôi vẫn rất thích sản phẩm này',
-        avatar: '/images/reviews/user-2.webp',
-        fullName: 'Hoa Nguyễn'
+        comment:
+          'Quạt rất mạnh, dự phòng mùa nắng nóng cúp điện, rất tiện. Shop đóng gói kĩ, chuẩn bị hàng nhanh. Tặng shop 5 sao',
+        avatar: '/images/reviews/user-7.jpg',
+        fullName: 'Tuấn Nguyễn'
       },
       {
-        comment: 'Thiết kế đẹp, dễ sử dụng và tiết kiệm điện. Tôi sẽ giới thiệu cho bạn bè',
-        avatar: '/images/reviews/user-3.webp',
-        fullName: 'Trần Thuỳ Linh'
+        comment:
+          'Mình nghĩ với giá tiền này thì quạt chắc chắn sẽ chất lượng với cả được nhiều người mua nữa, quả đúng là vậy',
+        avatar: '/images/reviews/user-8.jpg',
+        fullName: 'Trương Thế Anh'
       },
       {
-        comment: 'Quạt tích điện này rất tiện lợi, tôi có thể mang theo khi đi du lịch hoặc cắm trại',
-        avatar: '/images/reviews/user-4.webp',
-        fullName: 'Nguyễn Khánh Huyền'
+        comment: 'Quạt tích điện này rất tiện lợi, mình mua để mang theo khi đi du lịch hoặc cắm trại rất hợp',
+        avatar: '/images/reviews/user-9.jpg',
+        fullName: 'Nguyễn Thị Thu Huyền'
       },
       {
-        comment: 'Sản phẩm chất lượng, giá cả hợp lý. Tôi rất hài lòng với sự lựa chọn này',
-        avatar: '/images/reviews/user-5.webp',
-        fullName: 'Nguyễn Dung'
+        comment: 'Quạt chắc chắn, gió thổi mạnh. Nói chung là đáng mua',
+        avatar: '/images/reviews/user-10.jpg',
+        fullName: 'Lê Thuỳ Dung'
       }
     ],
-    content: `<section>
-  <h2>🌀 Quạt Tích Điện Đa Năng - Giải Pháp Mát Mẻ Mọi Lúc, Mọi Nơi!</h2>
-  
+    content: `<div class="product-description">
   <ul>
-    <li><strong>Xuất xứ:</strong> Chính hãng Việt Nam, sản xuất theo tiêu chuẩn chất lượng cao.</li>
-    
-        <li><strong>Công suất:</strong> 15W – tiết kiệm điện, hoạt động êm ái</li>
-        <li><strong>Dung lượng pin:</strong> Lithium 12V – 4000mAh</li>
-        <li><strong>Thời gian sử dụng:</strong> 4 – 10 giờ tùy mức gió</li>
-        <li><strong>Thời gian sạc:</strong> Khoảng 4 giờ để đầy pin</li>
-        <li><strong>Cổng sạc:</strong> DC 12V, hỗ trợ sạc qua nguồn điện hoặc pin năng lượng mặt trời</li>
-        <li><strong>Hỗ trợ sạc thiết bị:</strong> Cổng USB 5V – sạc điện thoại, đèn mini...</li>
-
-    <li><strong>Thiết kế & Kích thước:</strong>
-      <ul>
-        <li>Kích thước: 25cm x 20cm x 12cm</li>
-        <li>Trọng lượng: 1.2kg – dễ dàng mang theo</li>
-        <li>Chất liệu: Nhựa ABS cao cấp – bền, chống va đập</li>
-        <li>Màu sắc: Trắng, Xanh ngọc, Đen</li>
-        <li>Kiểu dáng: Quạt bàn kiêm treo tường, tay cầm tiện dụng</li>
-      </ul>
-    </li>
-
-    <li><strong>Tính năng nổi bật:</strong>
-      <ul>
-        <li>3 mức tốc độ gió: nhẹ, vừa, mạnh</li>
-        <li>3 cánh quạt lớn cho luồng gió rộng và êm</li>
-        <li>Tích hợp đèn LED chiếu sáng – tiện lợi khi mất điện</li>
-        <li>Chế độ xoay linh hoạt – làm mát không gian rộng</li>
-        <li>Tự động ngắt khi sạc đầy – an toàn và bảo vệ pin</li>
-      </ul>
-    </li>
-
-    <li><strong>An toàn & Tiện ích:</strong>
-      <ul>
-        <li>Có mạch bảo vệ quá tải, quá nhiệt</li>
-        <li>Hoạt động êm ái, không gây tiếng ồn</li>
-        <li>Phù hợp dùng trong gia đình, ký túc xá, văn phòng, cắm trại...</li>
-      </ul>
-    </li>
+    <li>Chất liệu: thân quạt và cánh bằng sắt sơn tĩnh điện, đế pin bằng nhựa ABS</li>
+    <li>Màu sắc: Quạt chạy pin có màu đen</li>
+    <li>Nguồn điện: 14,4V-21V (dùng được cho các loại pin tàu 18v-99v-118v-168v-199v)</li>
+    <li>Công suất: 20 - 25W</li>
+    <li>Trọng lượng quạt: 1.8kg</li>
+    <li>Đường kính bao ngoài: 22cm, đường kính cánh quạt: 20cm</li>
+    <li>Động cơ: 545 18V DC</li>
   </ul>
 
-  <p>📦 Bảo hành chính hãng 12 tháng – Giao hàng toàn quốc – Hỗ trợ đổi trả trong 7 ngày</p>
-</section>
+  <img src="/images/products/quat-tich-dien-1.webp" alt="Quạt tích điện" style="margin: 8px 0"/>
+
+  <h4>Ưu điểm sử dụng:</h4>
+  <ul>
+    <li>Dễ dàng sử dụng, tiện lợi và đáp ứng được nhiều mục đích sử dụng.</li>
+    <li>Chất liệu bằng kim loại kết hợp sơn tĩnh điện bền đẹp, mang lại giá trị sử dụng dài lâu.</li>
+    <li>Động cơ to khỏe, chắc chắn, an toàn khi sử dụng.</li>
+    <li>Quạt chạy chân pin Makita có thiết kế nhỏ gọn.</li>
+  </ul>
+
+  <img src="/images/products/quat-tich-dien-2.webp" alt="Quạt tích điện" style="margin: 8px 0"/>
+
+  <h3>✅ ƯU ĐIỂM SỬ DỤNG QUẠT SẠC ĐIỆN</h3>
+  <ul>
+    <li>Dễ dàng sử dụng, tiện lợi và đáp ứng được nhiều mục đích sử dụng.</li>
+    <li>Chất liệu bằng kim loại kết hợp sơn tĩnh điện bền đẹp, mang lại giá trị sử dụng dài lâu.</li>
+    <li>Động cơ to khỏe, chắc chắn, an toàn khi sử dụng.</li>
+    <li>Quạt thiết kế nhỏ gọn.</li>
+  </ul>
+
+  <img src="/images/products/quat-tich-dien-5.webp" alt="Quạt tích điện" style="margin: 8px 0"/>
+
+  <br />
+
+  <h3>✅ ĐẢM BẢO</h3>
+  <ul>
+    <li>✔️ Chất lượng sản phẩm tốt nhất, luôn làm hài lòng quý khách hàng.</li>
+    <li>✔️ Sản phẩm được kiểm tra kĩ càng, nghiêm ngặt trước khi giao cho khách hàng.</li>
+  </ul>
+
+  <p><strong>Cảm ơn Quý khách hàng! 💛💝💚</strong></p>
+</div>
 `
   },
   {
     id: 'ao-chong-nang',
     name: 'Áo chống nắng nam nữ 2 lớp - che trán - thoát hơi thấm hút mồ hôi - chống tia UV',
     shortName: 'Áo chống nắng',
-    description:
-      'Quạt tích điện là một thiết bị gia dụng tiện lợi, giúp làm mát không khí trong những ngày hè oi ả. Với thiết kế nhỏ gọn, dễ dàng di chuyển và sử dụng, quạt tích điện trở thành người bạn đồng hành lý tưởng cho mọi gia đình.',
+    description: 'Áo chống nắng 2 lớp, khoác nắng chống tia UV, có lưới tản nhiệt nách và phối sọc tay mẫu mới mùa hè',
     originalPrice: 360000, // giá gốc
     price: 179000, // giá sau khi giảm (giá chính)
     quantitySold: 1407, // số sản phẩm đã bán

@@ -75,7 +75,7 @@ const Price = (props) => {
         <Flex align="center" direction="column" gap="8px" bgColor="#FFF" py="16px">
           <FaRegCircleCheck size={24} color="#00b300" style={{ marginTop: '4px' }} />
           <Text fontSize={14} fontWeight={500} textAlign="center" color="#070707">
-            Kiểm tra trước, trả tiền sau
+            Nhận hàng rồi mới trả tiền
           </Text>
         </Flex>
         <Flex align="center" direction="column" gap="8px" bgColor="#FFF" py="16px">

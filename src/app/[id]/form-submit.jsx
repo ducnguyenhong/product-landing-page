@@ -20,7 +20,8 @@ import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
-const FormSubmit = ({ id, name, price, sizes }) => {
+const FormSubmit = (props) => {
+  const { id, name, price, sizes, shortName } = props;
   const {
     register,
     handleSubmit,
@@ -38,14 +39,14 @@ const FormSubmit = ({ id, name, price, sizes }) => {
 
   const onSubmit = (values) => {
     const { phone, address, fullName, size } = values;
+    const productSize = size ? size?.[0] : 'Chưa chọn';
 
     const data = {
       fullName: fullName?.trim(),
       phone: phone?.trim(),
       address: address?.trim(),
       createdAt: dayjs().format('DD/MM/YYYY - HH:mm'),
-      productName: `${name} - ${formatCurrency(price)}`,
-      productSize: size ? size?.[0] : 'Chưa chọn',
+      productName: `${shortName} - ${formatCurrency(price)} - ${productSize}`,
       productId: id
     };
     setLoading(true);

@@ -83,7 +83,7 @@ const ProductDetail = async ({ params }) => {
       <RevealClient>
         <OutStock remainingQuantity={remainingQuantity} />
       </RevealClient>
-      <FormSubmit id={id} name={name} price={price} sizes={sizes} />
+      <FormSubmit id={id} name={name} price={price} sizes={sizes} shortName={shortName} />
       {!!videoYoutube && (
         <RevealClient>
           <Video videoYoutube={videoYoutube} />

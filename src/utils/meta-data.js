@@ -74,7 +74,7 @@ export const META_KEYWORDS = [
   'đổi trả đồ gia dụng',
   'gia dụng bán chạy'
 ];
-const META_URL = 'https://giadungmoi.top';
+export const META_URL = 'https://giadungmoi.top';
 const META_TYPE = 'website';
 
 export const getMetadata = (data) => {

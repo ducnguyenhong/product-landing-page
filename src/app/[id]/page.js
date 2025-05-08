@@ -1,6 +1,6 @@
 import { NotFound, RevealClient } from '@/components/common';
 import { PRODUCT_LIST } from '@/utils/data';
-import { getMetadata } from '@/utils/meta-data';
+import { getMetadata, META_URL } from '@/utils/meta-data';
 import { Flex } from '@chakra-ui/react';
 import Script from 'next/script';
 import Discount from './discount';
@@ -19,7 +19,12 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const product = PRODUCT_LIST.find((item) => item.id === id);
   const { name, images, description, discount } = product || {};
-  return getMetadata({ title: `${name} - Giảm giá sốc ${discount}`, image: images?.[0], description });
+  return getMetadata({
+    title: `${name} - Giảm giá sốc ${discount}`,
+    image: images?.[0],
+    description,
+    url: `${META_URL}/${id}`
+  });
 }
 
 const ProductDetail = async ({ params }) => {

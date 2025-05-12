@@ -147,6 +147,7 @@ export const PRODUCT_LIST = [
 
     numOfReview: 461, // số lượng đánh giá,
     sizes: [
+      { label: 'Size M: 45-53Kg, dưới 1m62', value: 'M' },
       { label: 'Size L: 54-62Kg, dưới 1m70', value: 'L' },
       { label: 'Size XL: 63-75Kg, dưới 1m75', value: 'XL' },
       { label: 'Size 2XL: 76-83Kg, dưới 1m80', value: '2XL' },

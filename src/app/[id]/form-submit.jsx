@@ -90,7 +90,7 @@ const FormSubmit = (props) => {
           <Text color="#FFF" fontSize={16} fontWeight={500}>
             {formatCurrency(price)}
           </Text>
-          <Text color="#FFF">(miễn phí ship)</Text>
+          <Text color="#FFF">(+ phí ship)</Text>
         </Flex>
       </Flex>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'block', width: '100%' }}>

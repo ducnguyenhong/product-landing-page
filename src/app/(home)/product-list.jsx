@@ -3,7 +3,6 @@ import { formatCurrency } from '@/utils/helper-server';
 import { AspectRatio, Box, Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaStar } from 'react-icons/fa';
-import { LiaShippingFastSolid } from 'react-icons/lia';
 
 const ProductList = () => {
   return (
@@ -31,7 +30,7 @@ const ProductList = () => {
                 <AspectRatio ratio={4 / 3}>
                   <Box pos="relative">
                     <Image src={images?.[0]} alt={name} />
-                    <Flex
+                    {/* <Flex
                       align="center"
                       gap="6px"
                       bgColor="#00b300"
@@ -47,7 +46,7 @@ const ProductList = () => {
                       <Text fontSize={14} fontWeight={500} color="#FFF" mt="2px">
                         Miễn ship
                       </Text>
-                    </Flex>
+                    </Flex> */}
                   </Box>
                 </AspectRatio>
                 <Flex direction="column" justify="space-between" p="16px" flex={1}>

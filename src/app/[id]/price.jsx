@@ -69,7 +69,7 @@ const Price = (props) => {
         <Flex gap="6px" direction="column" align="center" justify="center" py="16px" bgColor="#FFF">
           <LiaShippingFastSolid size={28} color="#00b300" />
           <Text fontSize={14} fontWeight={500} textAlign="center" color="#070707">
-            Miễn phí giao hàng
+            Giao hàng nhanh chóng
           </Text>
         </Flex>
         <Flex align="center" direction="column" gap="8px" bgColor="#FFF" py="16px">

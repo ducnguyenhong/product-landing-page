@@ -30,7 +30,7 @@ const Slider = ({ images, name }) => {
         >
           <LiaShippingFastSolid size={23} color="#FFF" />
           <Text fontSize={14} fontWeight={500} color="#FFF" mt="2px">
-            Miễn phí giao hàng
+            Giao hàng nhanh chóng
           </Text>
         </Flex>
         <Swiper

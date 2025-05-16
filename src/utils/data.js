@@ -33,8 +33,8 @@ export const PRODUCT_LIST = [
     shortName: 'Quạt tích điện',
     description:
       'Quạt tích điện là một thiết bị gia dụng tiện lợi, giúp làm mát không khí trong những ngày hè oi ả. Với thiết kế nhỏ gọn, dễ dàng di chuyển và sử dụng, quạt tích điện trở thành người bạn đồng hành lý tưởng cho mọi gia đình.',
-    originalPrice: 529000, // giá gốc
-    price: 369000, // giá sau khi giảm (giá chính)
+    originalPrice: 484000, // giá gốc
+    price: 339000, // giá sau khi giảm (giá chính)
     quantitySold: 562, // số sản phẩm đã bán
     remainingQuantity: 27, // số sản phẩm còn lại
     discount: '30%', // phần trăm giảm giá
@@ -129,10 +129,10 @@ export const PRODUCT_LIST = [
     name: 'Áo chống nắng nam nữ 2 lớp - che trán - thoát hơi thấm hút mồ hôi - chống tia UV',
     shortName: 'Áo chống nắng',
     description: 'Áo chống nắng 2 lớp, khoác nắng chống tia UV, có lưới tản nhiệt nách và phối sọc tay mẫu mới mùa hè',
-    originalPrice: 360000, // giá gốc
-    price: 179000, // giá sau khi giảm (giá chính)
+    originalPrice: 260000, // giá gốc
+    price: 129000, // giá sau khi giảm (giá chính)
     quantitySold: 1407, // số sản phẩm đã bán
-    remainingQuantity: 142, // số sản phẩm còn lại
+    remainingQuantity: 42, // số sản phẩm còn lại
     discount: '50%', // phần trăm giảm giá
     viewing: 104, // số lượng người đang xem
     videoYoutube: 'https://www.youtube.com/embed/6ldTdzG-Lhw', // link nhúng video youtube

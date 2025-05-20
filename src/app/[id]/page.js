@@ -54,14 +54,24 @@ const ProductDetail = async ({ params }) => {
 
   return (
     <Flex as="main" direction="column" pos="relative" minH="100vh" bgColor="#FFF">
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy="afterInteractive"></Script>
+      {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EHY6RLHMNZ" strategy="afterInteractive"></Script>
       <Script id="google-analytics" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-EHY6RLHMNZ');`}
+      </Script> */}
+
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17098825050"></Script>
+      <Script>
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17098825050');`}
       </Script>
+
       <Discount discount={discount} name={shortName} />
       <RevealClient>
         <Slider images={images} name={name} />

@@ -179,7 +179,7 @@ export const PRODUCT_LIST = [
       },
       {
         comment: 'Rất đáng khi bỏ tiền ra mua hàng nha. Thời gian giao hàng nhanh',
-        avatar: '/images/reviews/user-5.webp',
+        avatar: '/images/reviews/user-5.jpg',
         fullName: 'Nguyễn Dung'
       }
     ],
